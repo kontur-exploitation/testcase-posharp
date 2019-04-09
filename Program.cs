@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Test
+namespace CSharpProject
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			var machineName = Environment.MachineName;
-			var user = Environment.UserName;
-			var assemblyPath = Assembly.GetExecutingAssembly().Location;
-			Console.Write($"Tested by {user}@{machineName} at {assemblyPath}");
-		}
-	}
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var machineName = Environment.MachineName;
+            var userName = Environment.UserName;
+            var dateTime = DateTime.Now;
+            var assemblyPath = Assembly.GetExecutingAssembly().Location;
+            Console.WriteLine($"Test application started at {dateTime} on {machineName} from {userName} and path {assemblyPath}");
+        }
+    }
 }
